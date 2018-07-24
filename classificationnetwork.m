@@ -9,6 +9,6 @@ sz = net.Layers(1).InputSize;
 image = image(1:sz(1), 1:sz(2), 1:sz(3));
 
 % Classify the image using Inception-v3
-label = classify(net, image)
+label = classify(net, image);
 
 end

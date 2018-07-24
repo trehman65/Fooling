@@ -1,5 +1,5 @@
 
-function []=runnetwork(imagepath,r,n)
+function thisLabel = runnetwork(imagepath,r,n,p)
 
 image = imread(imagepath);
 
@@ -11,9 +11,11 @@ if n==1
    image=addNoise(image, 1);
 end
 
-thisLabel=classificationnetwork(image);
+thisLabel=string(classificationnetwork(image));
 
-plotLabel(image, thisLabel)
+if p==1
+    plotLabel(image, thisLabel)
+end
 
 
 end

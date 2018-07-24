@@ -1,6 +1,9 @@
-function [] = batchrun(directory)
+%% batchrun('Data','dog')
+% Data folder contains dog folder, that contains images of the dogs
 
-img_dir = fullfile(directory, 'dog');
+function [] = batchrun(directory,class)
+
+img_dir = fullfile(directory, class);
 image_rgb_info  = dir( fullfile(img_dir, '*.jpg'));
 image_rgb_filenames = fullfile(img_dir, {image_rgb_info.name} );
 
